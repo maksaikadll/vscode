@@ -1,0 +1,186 @@
+* {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #2274a2;
+}
+.cont {
+    display:flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.head {
+    height: 60px;
+    width: 60px;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: 0.7s ease-in-out;
+}
+.head:hover {
+    cursor: pointer;
+}
+h1, h3, p, a, h2{
+    color: white;
+    font-family: Comic Relief;
+    transition: 0.3s;
+}
+header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.card {
+    width: 250px;
+    height: 250px;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: #5997ba;
+    margin: 25px;
+    transition: 0.15s;
+    box-sizing: border-box;
+}
+.card h3 {
+    margin: 5px;
+    text-align: center;
+}
+.card-pop {
+    width: 250px;
+    height: 250px;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-image: url("freepik__the-style-is-candid-image-photography-with-natural__47158.jpeg");
+    background-size: 100%; /* просто оно без этого слишком большое опять таки как оно работает JS его занет*/
+    background-position: 20px 3x0px; /*я сделал, оно работает, каким раком оно работает JS его знает (я про 3x0px)*/
+    margin: 25px;
+    transition: 0.15s;
+    box-sizing: border-box;
+    text-align: center;
+}
+.card-rec {
+    width: 250px;
+    height: 250px;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-image: url("freepik__the-style-is-candid-image-photography-with-natural__47157.jpeg");
+    background-size: 100%;
+    background-position: 20px 3x0px;
+    margin: 25px;
+    transition: 0.15s;
+    box-sizing: border-box;
+    text-align: center;
+}
+.card-nov {
+    width: 250px;
+    height: 250px;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-image: url("3.jpeg");
+    background-size: 100%;
+    background-position: 20px 3x0px;
+    margin: 25px;
+    transition: 0.15s;
+    box-sizing: border-box;
+    text-align: center;
+}
+.card-for-user {
+    width: 250px;
+    height: 250px;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-image: url("freepik__the-style-is-candid-image-photography-with-natural__99531.jpeg");
+    background-size: 100%;
+    background-position: 20px 3x0px;
+    margin: 25px;
+    transition: 0.15s;
+    box-sizing: border-box;
+    text-align: center;
+}
+.card:hover, .card-rec:hover, .card-pop:hover, .card-nov:hover, .card-for-user:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+.card:active, .card-rec:active, .card-pop:active, .card-nov:active, .card-for-user:active {
+    transform: scale(1);
+}
+footer {
+    background-color: white;
+    margin-top: 100px;
+}
+footer h2 {
+    text-align: center;
+    color: #2274a2;
+}
+.foot {
+    height: 170px;
+    background-color: #305971;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+.foot-card h2, h3 {
+    color: white;
+    margin: 5px;
+}
+span {
+    font-size: 35px;
+    font-family: Comic Relief;
+    color: white;
+    margin: 5px;
+}
+.foot-card {
+    height:110px;
+    margin: 10px;
+    text-align: center;
+    transition: 0.15s;
+}
+.foot-card:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+.empty {
+    font-weight: lighter;
+}
+a {
+    text-decoration: none;
+    font-family: Comic Relief;
+    color: #60b9eb;
+    font-size: 25px;
+}
+.smile {
+    color: black;
+    font-size: 25px;
+    font-weight: lighter;
+}
+.hr {
+    background-color: #458cb5;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.hr h2 {
+    margin: 2px; /* я сделал, оно работает, расскАжите почему так? для понимания удалите этот параметр   и посмотрите на текст*/
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+li {
+    border-radius: 10px;
+    background-color: #458cb5;
+    padding: 3px 3px 3px 3px;
+    list-style-type: none;
+    transition: 0.15s;
+    border: 2px solid white;
+}
+li:hover {
+    transform: scale(1.15);
+}
+li:active {
+    transform: scale(1);
+}
+.li {
+    color:aliceblue
+}
