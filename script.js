@@ -8,3 +8,6 @@ image.addEventListener('click', () => {
     rotationAngle += 360;
     image.style.transform = `rotate(${rotationAngle}deg)`;  
 });
+document.querySelector('.p404').addEventListener('click', () => {
+  alert('Ошибка 404: Страница не найдена!');
+});

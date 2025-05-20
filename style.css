@@ -9,6 +9,14 @@ body {
     justify-content: center;
     box-sizing: border-box;
 }
+.cont404 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(34, 116, 162, 0.8); /* полупрозрачный голубой фон, чтобы сливался с body */
+  padding: 20px;
+}
 .head {
     height: 60px;
     width: 60px;
@@ -25,6 +33,9 @@ h1, h3, p, a, h2{
     color: white;
     font-family: Comic Relief;
     transition: 0.3s;
+}
+.p404 {
+    font-size: 700%;
 }
 header {
     text-align: center;
@@ -44,6 +55,7 @@ header {
 .card h3 {
     margin: 5px;
     text-align: center;
+    font-size: 20px;
 }
 .card-pop {
     width: 250px;
@@ -52,11 +64,16 @@ header {
     border-radius: 10px;
     background-image: url("freepik__the-style-is-candid-image-photography-with-natural__47158.jpeg");
     background-size: 100%; /* просто оно без этого слишком большое опять таки как оно работает JS его занет*/
-    background-position: 20px 3x0px; /*я сделал, оно работает, каким раком оно работает JS его знает (я про 3x0px)*/
+    background-position: 20px 3x0px; /*я сделал, оно работает, какой разметкой оно работает JS его знает (я про 3x0px)*/
     margin: 25px;
     transition: 0.15s;
     box-sizing: border-box;
     text-align: center;
+}
+.card-pop h3 {
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
 }
 .card-rec {
     width: 250px;
@@ -71,6 +88,11 @@ header {
     box-sizing: border-box;
     text-align: center;
 }
+.card-rec h3 {
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
+}
 .card-nov {
     width: 250px;
     height: 250px;
@@ -84,6 +106,11 @@ header {
     box-sizing: border-box;
     text-align: center;
 }
+.card-nov h3 {
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
+}
 .card-for-user {
     width: 250px;
     height: 250px;
@@ -96,6 +123,11 @@ header {
     transition: 0.15s;
     box-sizing: border-box;
     text-align: center;
+}
+.card-for-user {
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
 }
 .card:hover, .card-rec:hover, .card-pop:hover, .card-nov:hover, .card-for-user:hover {
     transform: scale(1.15);
@@ -183,4 +215,162 @@ li:active {
 }
 .li {
     color:aliceblue
+}
+.p404 {
+  font-size: 100px;
+  font-weight: bold;
+  color: #00d9ff; /* основной голубой цвет */
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.4);
+  margin: 50px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.p404:hover {
+  color: #ffffff;
+  animation: glitch-blue 0.3s infinite;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #00d9ff,
+    0 0 20px #00d9ff;
+}
+
+@keyframes glitch-blue {
+  0% {
+    transform: translate(1px, -1px);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(1px, 1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(1px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.cont404::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: glowPulse 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Плавное свечение */
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* Шум поверх страницы — только в .cont404 */
+.cont404::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: -1;
+  animation: noiseMove 1s linear infinite;
+  pointer-events: none;
+}
+
+
+@keyframes noiseMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100px; }
+}
+/* Контейнер страницы */
+.page-wrapper {
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Эффекты заднего фона */
+.background-effects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Голубое неоновое свечение */
+.background-effects::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+/* "Шум" — тонкий цифровой эффект */
+.background-effects::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.015),
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  animation: noiseMove 1.2s linear infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+@keyframes noiseMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100px; }
 }
